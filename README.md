@@ -10,7 +10,7 @@ Tweener is a simple and lightweight flutter animation tool. Anyone can easily le
 
 ## Installation
 
-### Install the Tweener[https://pub.dev/packages/tweener](https://pub.dev/packages/tweener):
+### Install the Tweener [https://pub.dev/packages/tweener](https://pub.dev/packages/tweener):
 
 #### You should ensure that you add the following dependency in your Flutter project.
 ```

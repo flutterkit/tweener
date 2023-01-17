@@ -1,6 +1,6 @@
 import 'package:flutter/scheduler.dart';
 
-Ticker _ticker;
+Ticker? _ticker;
 
 class Miticker {
   static Ticker init(Function func) {
@@ -10,22 +10,22 @@ class Miticker {
       });
     }
 
-    return _ticker;
+    return _ticker!;
   }
 
   static start() {
-    if (!_ticker.isActive) {
-      _ticker.start();
+    if (!_ticker!.isActive) {
+      _ticker!.start();
     }
   }
-  
+
   static stop() {
-    if (_ticker.isActive) {
-      _ticker.stop();
+    if (_ticker!.isActive) {
+      _ticker!.stop();
     }
   }
-  
+
   static Ticker get ticker {
-    return _ticker;
+    return _ticker!;
   }
 }

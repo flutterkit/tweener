@@ -65,29 +65,25 @@ class Tweener {
   /// Tweener class
   ///
   ///////////////////////////////////////////////////////////////////////////
-  Map<String, dynamic> _object;
-  Map<String, dynamic> _valuesStart;
-  Map<String, dynamic> _valuesEnd;
+  Map<String, dynamic> _object = {};
+  Map<String, dynamic> _valuesStart = {};
+  Map<String, dynamic> _valuesEnd = {};
 
-  int _duration;
-  int _delayTime;
-  int _startTime;
+  int _duration = 0;
+  int _delayTime = 0;
+  int _startTime = 0;
 
-  Tweener _chainedTween;
-
-  Function _easingFunction;
-  Function _onUpdateCallback;
-  Function _onCompleteCallback;
+  Tweener? _chainedTween;
+  Function? _easingFunction;
+  Function? _onUpdateCallback;
+  Function? _onCompleteCallback;
 
   Tweener(Map<String, dynamic> object) {
     _object = object;
-
     _valuesStart = {};
     _valuesEnd = {};
-
     _duration = 1000;
     _delayTime = 0;
-
     _easingFunction = Ease.linear.none;
   }
 
@@ -154,7 +150,7 @@ class Tweener {
     var elapsed = (time - _startTime) / _duration;
     elapsed = elapsed > 1 ? 1 : elapsed;
 
-    var value = _easingFunction(elapsed);
+    var value = _easingFunction!(elapsed);
 
     for (var property in _valuesStart.keys) {
       var start = _valuesStart[property];
@@ -164,16 +160,16 @@ class Tweener {
     }
 
     if (_onUpdateCallback != null) {
-      _onUpdateCallback(_object);
+      _onUpdateCallback!(_object);
     }
 
     if (elapsed == 1) {
       if (_onCompleteCallback != null) {
-        _onCompleteCallback(_object);
+        _onCompleteCallback!(_object);
       }
 
       if (_chainedTween != null) {
-        _chainedTween.start();
+        _chainedTween?.start();
       }
 
       return false;

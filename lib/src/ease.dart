@@ -125,11 +125,11 @@ class Expo extends BaseEasing {
   }
 
   double easeIn(double k) {
-    return k == 0 ? 0 : pow(1024, k - 1);
+    return k == 0 ? 0.0 : pow(1024, k - 1).toDouble();
   }
 
   double easeOut(double k) {
-    return k == 1 ? 1 : 1 - pow(2, -10 * k);
+    return k == 1 ? 1 : 1 - pow(2, -10 * k).toDouble();
   }
 
   double easeInOut(double k) {
@@ -168,7 +168,7 @@ class Elastic extends BaseEasing {
     var s, a = 0.1, p = 0.4;
     if (k == 0) return 0;
     if (k == 1) return 1;
-    if (a == null || a < 1) {
+    if (a < 1) {
       a = 1;
       s = p / 4;
     } else
@@ -180,7 +180,7 @@ class Elastic extends BaseEasing {
     var s, a = 0.1, p = 0.4;
     if (k == 0) return 0;
     if (k == 1) return 1;
-    if (a == null || a < 1) {
+    if (a < 1) {
       a = 1;
       s = p / 4;
     } else
@@ -192,7 +192,7 @@ class Elastic extends BaseEasing {
     var s, a = 0.1, p = 0.4;
     if (k == 0) return 0;
     if (k == 1) return 1;
-    if (a == null || a < 1) {
+    if (a < 1) {
       a = 1;
       s = p / 4;
     } else

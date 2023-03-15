@@ -4,7 +4,7 @@ import './ease.dart';
 List<Tweener> _tweens = [];
 
 class Tweener {
-  static var ease = Ease;
+  static EaseInstanceClass ease = EaseInstanceClass();
   ///////////////////////////////////////////////////////////////////////////
   ///
   /// Tweener static methods

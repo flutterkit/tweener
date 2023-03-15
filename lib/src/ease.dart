@@ -265,3 +265,17 @@ class Ease {
   static BaseEasing back = Back();
   static BaseEasing bounce = Bounce();
 }
+
+class EaseClass {
+  BaseEasing linear = Linear();
+  BaseEasing quad = Quad();
+  BaseEasing cubic = Cubic();
+  BaseEasing quart = Quart();
+  BaseEasing quint = Quint();
+  BaseEasing sine = Sine();
+  BaseEasing expo = Expo();
+  BaseEasing circ = Circ();
+  BaseEasing elastic = Elastic();
+  BaseEasing back = Back();
+  BaseEasing bounce = Bounce();
+}

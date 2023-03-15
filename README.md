@@ -15,7 +15,7 @@ Tweener is a simple and lightweight flutter animation tool. Anyone can easily le
 #### You should ensure that you add the following dependency in your Flutter project.
 ```
 dependencies:
-  tweener: ^1.1.0
+  tweener: ^2.2.2
 ```
 
 #### install packages from the command line:
@@ -34,7 +34,7 @@ import 'package:tweener/tweener.dart';
 ```
 Tweener({"x": 0, "y": 0, "alpha": 0, "custom_prop_abc": 123})
     .to({"x": 100, "y": 500, "alpha": 1, "custom_prop_abc": 321}, 2000)
-    .easing(Ease.elastic.easeOut)
+    .easing(Tweener.ease.elastic.easeOut)
     .onUpdate((obj) {
         setState(() {
             _x = obj["x"];

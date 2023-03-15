@@ -266,7 +266,7 @@ class Ease {
   static BaseEasing bounce = Bounce();
 }
 
-class EaseClass {
+class EaseInstanceClass {
   BaseEasing linear = Linear();
   BaseEasing quad = Quad();
   BaseEasing cubic = Cubic();

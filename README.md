@@ -63,6 +63,9 @@ var tween2 = new Tweener(sprite)
 tween1.chain(tween2);
 tween1.start();
 ```
+## About AnimateCon
+
+To operate widget animations more conveniently, you can utilize the [AnimateCon](https://github.com/flutterkit/AnimateCon) library. This [library](https://github.com/flutterkit/AnimateCon) provides extremely facile implementation methods for animations such as position, scale, and alpha, enabling you to easily create various vivid and interesting animation effects.
 
 ## Thanks
 

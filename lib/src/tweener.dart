@@ -30,7 +30,13 @@ class Tweener {
     }
   }
 
+  static bool _enableManualUpdate = false;
+  static void enableManualUpdate() {
+    _enableManualUpdate = true;
+  }
+
   static void setup() {
+    if (_enableManualUpdate) return;
     Miticker.init(Tweener._tickerHandler);
     Miticker.start();
   }
